@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>DefaultProjectName - move</TITLE>
+<script type="text/javascript">
+  var relPathToCommmon = "../common/";
+  var relPathToHelpDir = "../common/help/";
+</script>
+<script type="text/javascript" src="../common/jsdyn.js" language="JavaScript"></script>
+<script type="text/javascript" src="../common/js.js" language="JavaScript"></script>
+<script type="text/javascript" src="leftmenu.js" language="JavaScript"></script>
+<script type="text/javascript">
+  var toSearchPage     = "_search','../search";
+  Body1();
+</script>
+<div class="headerPage">move</div>
+<div class="path"><a href="#" OnMouseOver="link('','../index',this)" class="pathLink">Default mainpage</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_dir','karel_hpp_doc0',this)" class="pathLink">karel_hpp_doc</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_class','Robot0',this)" class="pathLink">Robot</A><img src="../common/path-arrow.gif" class="path-arrow"><span class="pathNonLink">move</span></div>
+<script type="text/javascript">
+ Body2();
+ BodyLeftMenuStart();
+WriteLeftMenu("","","","");
+ BodyLeftMenuEnd();
+ Body3();
+</script>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','move151000','_description',this)" class="tabLinkInActive">Description</a></span>
+<span class="tabActive"><a href="#" OnMouseOver="linkTab('_member','move151000','_source',this)" class="tabLinkActive">Source</a></span>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','move151000','_callgraph',this)" class="tabLinkInActive">Call Graph</a></span>
+<script type="text/javascript">
+ Body4();
+</script>
+<div class="contentAirTop"></div>
+<div class="paragraph2NoTopPadding">Start Line: 1456</div>
+<pre class="codeExamples">
+void <a href="#" onMouseOver="link('_member','move151000',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;move&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>move - Move current robot one slot ahead.');" onMouseOut="return nd();">Robot::move</a>()
+{
+    if ( <a href="#" onMouseOver="link('_member','checkStatus151000',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>bool&nbsp;&nbsp;checkStatus&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>checkStatus - Retrieve current robot status.');" onMouseOut="return nd();">checkStatus</a> ( ) &amp;&amp;
+         <a href="#" onMouseOver="link('_member','frontIsClear151000',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>bool&nbsp;&nbsp;frontIsClear&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>frontIsClear - Test if world slot ahead has free space for robot.');" onMouseOut="return nd();">frontIsClear</a> ( ) )
+    {
+        switch ( <a href="#" onMouseOver="link('_member','direction55512',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;direction ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">direction</a> )
+        {
+            case NORTH  :
+              <a href="#" onMouseOver="link('_member','set2680722704',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;set&nbsp;&nbsp;(int x, int y)',CAPTION,'<strong>Brief description</strong><BR>set  - Modify robot position at world coordinates.');" onMouseOut="return nd();">set</a> (  0, +1 );
+              break;
+            case EAST  :
+              <a href="#" onMouseOver="link('_member','set2680722704',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;set&nbsp;&nbsp;(int x, int y)',CAPTION,'<strong>Brief description</strong><BR>set  - Modify robot position at world coordinates.');" onMouseOut="return nd();">set</a> ( +1,  0 );
+              break;
+            case SOUTH :
+              <a href="#" onMouseOver="link('_member','set2680722704',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;set&nbsp;&nbsp;(int x, int y)',CAPTION,'<strong>Brief description</strong><BR>set  - Modify robot position at world coordinates.');" onMouseOut="return nd();">set</a> (  0, -1 );
+              break;
+            case WEST  :
+              <a href="#" onMouseOver="link('_member','set2680722704',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;set&nbsp;&nbsp;(int x, int y)',CAPTION,'<strong>Brief description</strong><BR>set  - Modify robot position at world coordinates.');" onMouseOut="return nd();">set</a> ( -1,  0 );
+              break;
+        }
+    }
+    else
+    {
+        <a href="#" onMouseOver="link('_member','show_Error189216495',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;show_Error&nbsp;&nbsp;(const char * message)',CAPTION,'<strong>Brief description</strong><BR>show_Error  - Show error message.');" onMouseOut="return nd();">show_Error</a> ( "ERROR: Can't move." );
+    }
+} // end Robot::move ( )
+</pre><div class="contentAirBottom"></div>
+<script type="text/javascript">
+ Body5();
+Statistics("","","","","");
+ Body6();
+SetPageTab('_member','_source');
+</script>

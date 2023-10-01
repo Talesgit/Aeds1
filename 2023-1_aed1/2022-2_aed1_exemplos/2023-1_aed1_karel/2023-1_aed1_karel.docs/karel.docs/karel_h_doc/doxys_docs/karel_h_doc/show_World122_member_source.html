@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<TITLE>DefaultProjectName - show_World</TITLE>
+<script type="text/javascript">
+  var relPathToCommmon = "../common/";
+  var relPathToHelpDir = "../common/help/";
+</script>
+<script type="text/javascript" src="../common/jsdyn.js" language="JavaScript"></script>
+<script type="text/javascript" src="../common/js.js" language="JavaScript"></script>
+<script type="text/javascript" src="leftmenu.js" language="JavaScript"></script>
+<script type="text/javascript">
+  var toSearchPage     = "_search','../search";
+  Body1();
+</script>
+<div class="headerPage">show_World</div>
+<div class="path"><a href="#" OnMouseOver="link('','../index',this)" class="pathLink">Default mainpage</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_dir','karel_h_doc0',this)" class="pathLink">karel_h_doc</A><img src="../common/path-arrow.gif" class="path-arrow"><span class="pathNonLink">show_World</span></div>
+<script type="text/javascript">
+ Body2();
+ BodyLeftMenuStart();
+WriteLeftMenu("","","","");
+ BodyLeftMenuEnd();
+ Body3();
+</script>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','show_World122','_description',this)" class="tabLinkInActive">Description</a></span>
+<span class="tabActive"><a href="#" OnMouseOver="linkTab('_member','show_World122','_source',this)" class="tabLinkActive">Source</a></span>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','show_World122','_callgraph',this)" class="tabLinkInActive">Call Graph</a></span>
+<script type="text/javascript">
+ Body4();
+</script>
+<div class="contentAirTop"></div>
+<div class="paragraph2NoTopPadding">Start Line: 544</div>
+<pre class="codeExamples">
+void <a href="#" onMouseOver="link('_member','show_World122',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;show_World&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>show_World - Show current visible items in the world slots.');" onMouseOut="return nd();">show_World</a>()
+{
+    int  avenue, street;
+    int  x, y, k;
+    char c;
+    char screen [23][80];
+    char board  [23][80];
+
+    strcpy ( board [21], "ST.+-------------------------------------------+ " );
+    strcpy ( board [20], "10 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [19], "   |                                           | " );
+    strcpy ( board [18], " 9 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [17], "   |                                           | " );
+    strcpy ( board [16], " 8 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [15], "   |                                           | " );
+    strcpy ( board [14], " 7 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [13], "   |                                           | " );
+    strcpy ( board [12], " 6 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [11], "   |                                           | " );
+    strcpy ( board [10], " 5 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [ 9], "   |                                           | " );
+    strcpy ( board [ 8], " 4 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [ 7], "   |                                           | " );
+    strcpy ( board [ 6], " 3 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [ 5], "   |                                           | " );
+    strcpy ( board [ 4], " 2 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [ 3], "   |                                           | " );
+    strcpy ( board [ 2], " 1 |   .   .   .   .   .   .   .   .   .   .   | " );
+    strcpy ( board [ 1], "   +-------------------------------------------+ " );
+    strcpy ( board [ 0], "AVE.   1   2   3   4   5   6   7   8   9   10    " );
+
+    <a href="#" onMouseOver="link('_member','clrscr122',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;clrscr&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>clrscr - Clear screen.');" onMouseOut="return nd();">clrscr</a> ( );
+
+    <a href="#" onMouseOver="link('_class','s_world0',this); overLibDiagram();return overlib('<strong>Public Attributes</strong><BR><TABLE><TR><TD>data</TD></TR><TR><TD>depth</TD></TR><TR><TD>height</TD></TR><TR><TD>name</TD></TR><TR><TD>width</TD></TR></TABLE>',CAPTION,'<strong>Brief description</strong><BR>world  - World structure definition.');" onMouseOut="return nd();">ref_world</a> v_world = <a href="#" onMouseOver="link('_member','world_now0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>ref_world&nbsp;&nbsp;world_now ',CAPTION,'<strong>Brief description</strong><BR>world_now - Current reference to a World structure.');" onMouseOut="return nd();">world_now</a>;
+
+    if ( v_world != NULL )
+    {
+        strcpy ( screen [21], board [21] );
+        strcpy ( screen [ 1], board [ 1] );
+        strcpy ( screen [ 0], board [ 0] );
+
+        for ( street = 1; street &lt;= <a href="#" onMouseOver="link('_member','streets122',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;streets&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>streets - Retrive current world number of streets.');" onMouseOut="return nd();">streets</a>( ); street++ )
+        {
+            x = 2*street;
+            strcpy ( screen [  x  ], board [  x  ] );
+            strcpy ( screen [ x+1 ], board [ x+1 ] );
+
+            for ( avenue = 1; avenue &lt;= <a href="#" onMouseOver="link('_member','avenues122',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;avenues&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>avenues - Retrive current world number of avenues.');" onMouseOut="return nd();">avenues</a>( ); avenue++ )
+            {
+                y = 4*avenue;
+                   k = <a href="#" onMouseOver="link('_member','has_VWALL231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;has_VWALL&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>has_VWALL - Retrieve a vertical wall index at a world slot.');" onMouseOut="return nd();">has_VWALL</a> ( avenue, street );
+                   if ( k &gt;= 0 &amp;&amp; avenue &lt; v_world-&gt;<a href="#" onMouseOver="link('_member','width431183',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;width ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">width</a> )
+                   {
+                      screen [ x ][ y+5 ] = '|';
+                      if ( 1 &lt; street &amp;&amp; street &lt; v_world-&gt;<a href="#" onMouseOver="link('_member','height431183',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;height ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">height</a> )
+                      {
+                         screen [ x-1 ][ y+5 ] = '|';
+                      }
+                   }
+                   k = <a href="#" onMouseOver="link('_member','has_HWALL231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;has_HWALL&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>has_HWALL - Retrieve a horizontal wall index at a world slot.');" onMouseOut="return nd();">has_HWALL</a> ( avenue, street );
+                   if ( k &gt;= 0 &amp;&amp; street &lt; v_world-&gt;<a href="#" onMouseOver="link('_member','height431183',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;height ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">height</a> )
+                   {
+                      screen [ x+1 ][ y+2 ] = '_';
+                      screen [ x+1 ][ y+3 ] = '_';
+                      screen [ x+1 ][ y+4 ] = '_';
+                   }
+                   k = <a href="#" onMouseOver="link('_member','has_BEEPERS231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;has_BEEPERS&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>has_BEEPERS - Retrive number of beepers at a world slot.');" onMouseOut="return nd();">has_BEEPERS</a> ( avenue, street );
+                   if ( k &gt; 0 )
+                   {
+                      screen [  x  ][ y+2 ] = '(';
+                      screen [  x  ][ y+3 ] = (char) ((int) '0' + k);
+                      screen [  x  ][ y+4 ] = ')';
+                   }
+                   k = <a href="#" onMouseOver="link('_member','has_BOX231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;has_BOX&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>has_Box - Retrive a box index at a world slot.');" onMouseOut="return nd();">has_BOX</a> ( avenue, street );
+                   if ( k &gt; 0 )
+                   {
+                      screen [  x  ][ y+2 ] = '[';
+                      screen [  x  ][ y+3 ] =  k ;
+                      screen [  x  ][ y+4 ] = ']';
+                   }
+                   c = <a href="#" onMouseOver="link('_member','get_World231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>char&nbsp;&nbsp;get_World&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>get_world - Retrieve top information of a world slot.');" onMouseOut="return nd();">get_World</a> ( avenue, street );
+                   if ( 'A' &lt;= c &amp;&amp; c &lt;= 'Z' )
+                   {
+                      screen [  x  ][ y+3 ] =  c ;
+                   }
+            }
+            strcat ( screen [ street ], msg_board [ street ] );
+       }
+    // compose bottom lines
+       strcat ( screen [21], v_world-&gt;<a href="#" onMouseOver="link('_member','name431183',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>char&nbsp;&nbsp;name [20]',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">name</a> );
+       <a href="#" onMouseOver="link('_member','debug_txt0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>char&nbsp;&nbsp;debug_txt [40]',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">debug_txt</a> [19] = '\0';
+       strcat ( screen [ 1], debug_txt     );
+       <a href="#" onMouseOver="link('_member','msg_txt0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>char&nbsp;&nbsp;msg_txt [20]',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">msg_txt</a>   [19] = '\0';
+       strcat ( screen [ 0], msg_txt       );
+       <a href="#" onMouseOver="link('_member','show_Screen246775574',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;show_Screen&nbsp;&nbsp;(char screen[][80])',CAPTION,'<strong>Brief description</strong><BR>show_Screen - Show 22x80 screen mirror.');" onMouseOut="return nd();">show_Screen</a> ( screen );
+    }
+} // end show_World ( )
+</pre><div class="contentAirBottom"></div>
+<script type="text/javascript">
+ Body5();
+Statistics("","","","","");
+ Body6();
+SetPageTab('_member','_source');
+</script>

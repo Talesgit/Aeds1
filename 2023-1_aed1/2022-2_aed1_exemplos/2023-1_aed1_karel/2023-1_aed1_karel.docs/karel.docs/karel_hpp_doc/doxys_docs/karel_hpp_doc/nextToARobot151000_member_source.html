@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE>DefaultProjectName - nextToARobot</TITLE>
+<script type="text/javascript">
+  var relPathToCommmon = "../common/";
+  var relPathToHelpDir = "../common/help/";
+</script>
+<script type="text/javascript" src="../common/jsdyn.js" language="JavaScript"></script>
+<script type="text/javascript" src="../common/js.js" language="JavaScript"></script>
+<script type="text/javascript" src="leftmenu.js" language="JavaScript"></script>
+<script type="text/javascript">
+  var toSearchPage     = "_search','../search";
+  Body1();
+</script>
+<div class="headerPage">nextToARobot</div>
+<div class="path"><a href="#" OnMouseOver="link('','../index',this)" class="pathLink">Default mainpage</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_dir','karel_hpp_doc0',this)" class="pathLink">karel_hpp_doc</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_class','Robot0',this)" class="pathLink">Robot</A><img src="../common/path-arrow.gif" class="path-arrow"><span class="pathNonLink">nextToARobot</span></div>
+<script type="text/javascript">
+ Body2();
+ BodyLeftMenuStart();
+WriteLeftMenu("","","","");
+ BodyLeftMenuEnd();
+ Body3();
+</script>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','nextToARobot151000','_description',this)" class="tabLinkInActive">Description</a></span>
+<span class="tabActive"><a href="#" OnMouseOver="linkTab('_member','nextToARobot151000','_source',this)" class="tabLinkActive">Source</a></span>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','nextToARobot151000','_callgraph',this)" class="tabLinkInActive">Call Graph</a></span>
+<script type="text/javascript">
+ Body4();
+</script>
+<div class="contentAirTop"></div>
+<div class="paragraph2NoTopPadding">Start Line: 1566</div>
+<pre class="codeExamples">
+bool <a href="#" onMouseOver="link('_member','nextToARobot151000',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>bool&nbsp;&nbsp;nextToARobot&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>nextToARobot - Test if there is another robot at current world slot.');" onMouseOut="return nd();">Robot::nextToARobot</a>()
+{
+    bool result = false;
+    char c;
+    int  k=0;
+
+    if ( <a href="#" onMouseOver="link('_member','world0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>ref_World&nbsp;&nbsp;world ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">world</a> != nullptr &amp;&amp;
+         <a href="#" onMouseOver="link('_member','checkStatus151000',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>bool&nbsp;&nbsp;checkStatus&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>checkStatus - Retrieve current robot status.');" onMouseOut="return nd();">checkStatus</a> ( )  )
+    {
+       do
+       {
+           k = k + 1;
+           c = <a href="#" onMouseOver="link('_member','world0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>ref_World&nbsp;&nbsp;world ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">world</a>-&gt;<a href="#" onMouseOver="link('_member','data57293',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>char&nbsp;&nbsp;data [10][10][20]',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">data</a> [ <a href="#" onMouseOver="link('_member','street55512',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;street ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">street</a>-1 ][ <a href="#" onMouseOver="link('_member','avenue55512',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;avenue ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">avenue</a>-1 ][ k ];
+       }
+       while ( k+1 &lt; <a href="#" onMouseOver="link('_member','world0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>ref_World&nbsp;&nbsp;world ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">world</a>-&gt;depth &amp;&amp;
+               ! ('A' &lt;= c &amp;&amp; c &lt;= 'Z' ) );
+
+       result = ( 'A' &lt;= c &amp;&amp; c &lt;= 'Z' );
+    }
+
+    return ( result );
+} // end Robot::nextToARobot ( )
+</pre><div class="contentAirBottom"></div>
+<script type="text/javascript">
+ Body5();
+Statistics("","","","","");
+ Body6();
+SetPageTab('_member','_source');
+</script>

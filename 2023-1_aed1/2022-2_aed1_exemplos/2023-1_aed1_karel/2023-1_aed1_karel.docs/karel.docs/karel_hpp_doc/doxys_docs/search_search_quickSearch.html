@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<TITLE>DefaultProjectName - Search</TITLE>
+<script type="text/javascript">
+  var relPathToCommmon = "common/";
+  var relPathToHelpDir = "common/help/";
+</script>
+<script type="text/javascript" src="common/jsdyn.js" language="JavaScript"></script>
+<script type="text/javascript" src="common/js.js" language="JavaScript"></script>
+<script type="text/javascript" src="leftmenu.js" language="JavaScript"></script>
+<script type="text/javascript">
+  var toSearchPage     = "_search','search";
+  Body1();
+</script>
+<div class="headerPage">Search</div>
+<div class="path"><span class="pathNonLink">Search</span></div>
+<script type="text/javascript">
+ Body2();
+ BodyLeftMenuStart();
+WriteLeftMenu("divID0","aID0","headerLeftMenuActive","leftMenuLinkHeadActive");
+ BodyLeftMenuEnd();
+ Body3();
+</script>
+<span class="tabActive"><a href="#" OnMouseOver="linkTab('_search','search','_quickSearch',this)" class="tabLinkActive">Quick search</a></span>
+<script type="text/javascript">
+ Body4();
+</script>
+<script language="JavaScript">
+translatorForName = "Name";
+translatorForBriefDes = "Brief description";
+translatorForParent = "Parent";
+</script>
+<div class="contentAirTop"></div><!-- Always put this in the top of a text pages -->
+<div class="padding"><table border=0 cellpadding=0 cellspacing=0>
+<tr valign=top>
+<td>
+<div>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr valign=top>
+<td align=left class="searchInfoText">
+Text</td>
+</tr>
+<tr valign=top>
+<td align=left>
+<input type="text" id="SearchString" onKeyPress="searchEnterCheck(event);" onkeyup="Search(false);" value=""><br><br>
+<input type="button" id="butSearch" onClick="Search(true);" value="Search">
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td class="searchOptionsSpace"></td>
+<td>
+<div>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr valign=top>
+<td align=right class="searchInfoText">
+Fields&nbsp;</td>
+<td align=left class="searchOptionsSpace"></td>
+<td align=left class="searchInfoText">
+&nbsp;Entities</td>
+<tr valign=top align=left>
+<td align=right>
+Name<input type=checkbox id="chkName" onClick="Search(false);ToSearchCookie(this.id,this.checked);"><br>
+Brief<input type=checkbox id="chkBrief" onClick="Search(false);ToSearchCookie(this.id,this.checked);"><br>
+Keywords<input type=checkbox id="chkKeywords" onClick="Search(false);ToSearchCookie(this.id,this.checked);"></td>
+<td align=left></td>
+<td align=left>
+<input type=checkbox id="chkClass" onClick="Search(false);ToSearchCookie(this.id,this.checked);">Classes<br>
+<input type=checkbox id="chkMethod" onClick="Search(false);ToSearchCookie(this.id,this.checked);">Members<br>
+<input type=checkbox id="chkOthers" onClick="Search(false);ToSearchCookie(this.id,this.checked);">Others</td>
+</tr>
+</table>
+</div>
+</td>
+<td class="searchOptionsSpace"></td>
+<td>
+<div>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr valign=top>
+<td align=left class="searchInfoText">
+&nbsp;Options</td>
+</td>
+</tr>
+<tr valign=top>
+<td align=left>
+<input type=checkbox id="chkIncSearch" onClick="Search(false);ToSearchCookie(this.id,this.checked);enableDisableSearchButton();">&nbsp;Incremental search<br>
+<table border=0 cellpadding=0 cellspacing=0><tr><td height=3></td></tr></table>
+<table border=0 cellpadding=0 cellspacing=0><tr><td valign=top>&nbsp;<input type="text" id="rowsNumber" maxlength=3 size=1 onkeyup="Search(false);ToSearchCookie(this.id,this.value);"></td><td>&nbsp;Number of Rows<br>&nbsp;(empty = Show all)</td></tr></table><br>
+<br>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<span id="OutputDiv">&nbsp;Loading Please wait...</span>
+<div class="contentAirBottom"></div><!-- Always put this in the bottom of all pages -->
+<span id="dataDiv">
+<script language="javascript">
+function addData()
+{
+arr_types = ["_class","_member","_file","_namespace","_page","_dir","_unit"];
+arr_dir = ["","karel_hpp_doc"];
+arr_find = ["+","-","*","/","%","^","&","|","~","!","=","<",">","'","[","]","(",")"," ",",",":","\"","\\","?",".","@","#","$"];
+arr_replace = ["pl_","mi_","mu_","di_","mo_","si_","am_","pi_","ti_","ex_","eq_","le_","gr_","ap_","lb_","rb_","lp_","rp_","","co_","co_","qu_","bs_","qm_","_","at_","ha_","do_"];
+arr_array_of_arraynames = ["arr_directory_0","arr_class_0","arr_page_0","arr_unit_0","arr_namespace_0","arr_member_0","arr_file_0"];
+var OutputDiv = document.getElementById("OutputDiv");
+OutputDiv.innerHTML = "&nbsp;Loading Classes...";
+arr_class_0 = ["0",1,"box - Box object definition.","Box","karel_hpp_doc","","0",1,"robot     - Robot object definition.","Robot","karel_hpp_doc","","0",1,"world  - World object definition.","World","karel_hpp_doc",""];
+OutputDiv.innerHTML = "&nbsp;Loading Members...";
+arr_member_0 = ["151000",1,,"Robot","Robot","","150221",1,,"World","World","","2680721925",1,"areValid - Check if avenue and street are valid.","areValid","World","","2680722704",1,"areYouHere - Test robot location.","areYouHere","Robot","","1820",1,,"avenue","Box","","55512",1,,"avenue","Robot","","150221",1,"avenues - Retrieve current world number of avenues.","avenues","World","","1820",1,,"beepers","Box","","55512",1,,"beepers","Robot","","151000",1,"beepersInBag - Test if there is any beeper in the current robot bag.","beepersInBag","Robot","","22325",1,"checkStatus - Check current box status.","checkStatus","Box","","151000",1,"checkStatus - Retrieve current robot status.","checkStatus","Robot","","150221",1,"close - Close world and shutdown.","close","World","","22325",1,"close - Close current box.","close","Box","","452021808",1,"create - Set default world dimensions.","create","World","","1291204019",1,"create - Set box parameters.","create","Box","","2552983788",1,"create_Robot     - Set robot parameters.","create","Robot","","57293",1,,"data","World","","151000",1,"debug - Show current robot information.","debug","Robot","","151000",1,"debugOff - Reset debug to omit robot information.","debugOff","Robot","","151000",1,"debug_On  - Set debug to show robot information.","debugOn","Robot","","57293",1,,"depth","World","","1820",1,,"direction","Box","","55512",1,,"direction","Robot","","231088044",1,"face - Set a new direction to the current robot.","face","Robot","","151000",1,"faceEast - Set east   as the new direction of the current robot.","faceEast","Robot","","151000",1,"faceNorth - Set north as the new direction of the current robot.","faceNorth","Robot","","151000",1,"faceSouth - Set south as the new direction of the current robot.","faceSouth","Robot","","151000",1,"faceWest - Set west   as the new direction of the current robot.","faceWest","Robot","","231088044",1,"facing - Test if current robot faces a given direction at world.","facing","Robot","","151000",1,"facingEast - Test if current robot faces East.","facingEast","Robot","","151000",1,"facingNorth - Test if current robot faces North.","facingNorth","Robot","","151000",1,"facingSouth - Test if current robot faces South.","facingSouth","Robot","","151000",1,"facingWest - Test if current robot faces West.","facingWest","Robot","","151000",1,"frontIsClear - Test if world slot ahead has free space for robot.","frontIsClear","Robot","","2680721925",1,"get_world - Retrieve top information of a world slot.","get","World","","2680721925",1,"has_BEEPER - Retrive a beeper index at a world slot.","has_BEEPER","World","","2680721925",1,"has_BEEPERS - Retrive number of beepers at a world slot.","has_BEEPERS","World","","2680721925",1,"has_Box - Retrive a box index at a world slot.","has_BOX","World","","2680721925",1,"has_HWALL - Retrieve a horizontal wall index at a world slot.","has_HWALL","World","","723293279",1,"has_ROBOT - Retrive if there is a specified robot at a world slot.","has_ROBOT","World","","2680721925",1,"has_VWALL - Retrieve a vertical wall index at a world slot.","has_VWALL","World","","2680721925",1,"has_slot - Retrieve a free space at a world slot.","has_slot","World","","57293",1,,"height","World","","22325",1,"isEmpty - Test if there is any beeper into the box.","isEmpty","Box","","151000",1,"leftIsClear - Test if world slot at left has free space for robot.","leftIsClear","Robot","","151000",1,"move - Move current robot one slot ahead.","move","Robot","","57293",1,,"name","World","","1820",1,,"name","Box","","55512",1,,"name","Robot","","22325",1,"beepers - Retrieve number of beepers of current robot.","nbeepers","Box","","151000",1,"beepers - Retrive number of beepers in the current robot bag.","nbeepers","Robot","","151000",1,"nextToABeeper - Test if there is any beeper current world slot.","nextToABeeper","Robot","","151000",1,"nextToABpx - Test if there is a box at current world slot.","nextToABox","Robot","","151000",1,"nextToARobot - Test if there is another robot at current world slot.","nextToARobot","Robot","","22325",1,"openBox - Open current box.","open","Box","","151000",1,"pickBeeper - Pick a beeper at current world slot and keep it.","pickBeeper","Robot","","142762776",1,"pickBeeperFromBox - Pick a beeper from box at current world slot and keep it.","pickBeeperFromBox","Robot","","22325",1,"pullBeeper - Retrieve all beepers in the current box.","pullBeeper","Box","","22325",1,"pushBeeper - Put a beeper into the box.","pushBeeper","Box","","151000",1,"putBeeper - Put a beeper at current world slot.","putBeeper","Robot","","142762776",1,"putBeeperInBox - Push a beeper into a box at current world slot.","putBeeperIntoBox","Robot","","452021808",1,"read - Read a file to restore world items.","read","World","","2635109676",1,"remove  - Remove an object at a world slot.","remove","World","","150221",1,"reset - Clean up world slots.","reset","World","","151000",1,"rightIsClear - Test if world slot at right has free space for robot.","rightIsClear","Robot","","452021808",1,"save - Write current world items to a file.","save","World","","723293279",1,"search_world - Search a world slot for an object.","search","World","","723293279",1,"set - Install an object at a world slot.","set","World","","2680722704",1,"set  - Modify robot position at world coordinates.","set","Robot","","150221",1,"show - Show current visible items in the world slots.","show","World","","1820",1,,"status","Box","","55512",1,,"status","Robot","","1820",1,,"street","Box","","55512",1,,"street","Robot","","150221",1,"streets - Retrieve current world number of streets.","streets","World","","1820",1,,"symbol","Box","","55512",1,,"symbol","Robot","","151000",1,"turnLeft - Turn robot to the left of its current direction.","turnLeft","Robot","","151000",1,"turnOff - Set current robot off.","turnOff","Robot","","151000",1,"turnOn - Set current robot on.","turnOn","Robot","","57293",1,,"width","World","","151000",1,"xAvenue - Retrieve robot location on avenue number.","xAvenue","Robot","","151000",1,"yStreet - Retrieve robot location at street number.","yStreet","Robot","","151000",1,,"~Robot","Robot","","150221",1,,"~World","World","","0",1,,"baseDelay","karel_hpp_doc","","0",1,"box_now   - Current reference to a Box   structure.","box_now","karel_hpp_doc","","122",1,"clreol - Clear till the end of line.","clreol","karel_hpp_doc","disabled obs ","122",1,"clrscr - Clear screen.","clrscr","karel_hpp_doc","dependent obs ","0",1,,"debug_txt","karel_hpp_doc","","243606788",1,"delay - Sleep for a given number of ticks.","delay","karel_hpp_doc","","0",1,"error_code - Keep error code (global).","error_code","karel_hpp_doc","","0",1,,"error_txt","karel_hpp_doc","","86138908",1,"fatal_Error  - Show error message and finishes program.","fatal_Error","karel_hpp_doc","","122",1,"get_Error  - Copy current error code.","get_Error","karel_hpp_doc","","231090242",1,"gotoxy - Move focus to screen coordinates.","gotoxy","karel_hpp_doc","","122",1,"has_Error  - Test if there's any error code set.","has_Error","karel_hpp_doc","","0",1,,"has_Text","karel_hpp_doc","","0",1,,"has_debug","karel_hpp_doc","","0",1,,"message","karel_hpp_doc","","0",1,,"msg_board","karel_hpp_doc","","0",1,,"msg_txt","karel_hpp_doc","","0",1,"ref_box - Reference to a Box object.","ref_Box","karel_hpp_doc","","0",1,"ref_robot - Reference to a Robot structure.","ref_Robot","karel_hpp_doc","","0",1,"ref_world - Reference to a World object.","ref_World","karel_hpp_doc","","0",1,"robot_now - Current reference to a Robot structure.","robot_now","karel_hpp_doc","","60979",1,"set_Error  - Set a new error code.","set_Error","karel_hpp_doc","","60979",1,"setSpeed - Set new step delay base.","set_Speed","karel_hpp_doc","","252067370",1,"show_Board - Show basic robot board.","show_Board","karel_hpp_doc","","189216495",1,"show_Error  - Show error message.","show_Error","karel_hpp_doc","","246775574",1,"show_Screen - Show 22x80 screen mirror.","show_Screen","karel_hpp_doc","","189216495",1,"show_Text  - Show text message.","show_Text","karel_hpp_doc","","0",1,,"stepDelay","karel_hpp_doc","","0",1,,"world","karel_hpp_doc","","0",1,"world_now - Current reference to a World structure.","world_now","karel_hpp_doc",""];
+OutputDiv.innerHTML = "&nbsp;Loading Files...";
+arr_file_0 = ["0",1,,"karel.hpp","karel_hpp_doc",""];
+OutputDiv.innerHTML = "&nbsp;Loading Namespaces...";
+arr_namespace_0 = [];
+OutputDiv.innerHTML = "&nbsp;Loading Pages...";
+arr_page_0 = [];
+OutputDiv.innerHTML = "&nbsp;Loading Directories...";
+arr_directory_0 = ["0",1,,"karel_hpp_doc","Default mainpage","autogenerated page "];
+OutputDiv.innerHTML = "&nbsp;Loading Units...";
+arr_unit_0 = [];
+OutputDiv.innerHTML = "&nbsp;Ready";
+}
+</script>
+</span>
+<script language="JavaScript">
+init();
+</script>
+<script type="text/javascript">
+ Body5();
+Statistics("","","","","");
+ Body6();
+SetPageTab('_search','_quickSearch');
+</script>

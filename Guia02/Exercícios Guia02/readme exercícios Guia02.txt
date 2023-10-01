@@ -1,0 +1,2 @@
+02111. Foi necessário criar 3 "stepDownLeft", cada um pra adicionar um "putBeeper" a mais, pois não foi possível colocar os beepers automaticamente na proporção 1, 2 ,3.
+Na 0212, não consegui criar as funções para os  if right is clear e as outras serem automatizadas, o robô fez todos os passos conforme a guia, mas de uma maneira mais "manual". Sempre quando chegava a uma porta aberta para o marcador adicionei o comando if, ao invés de ser totalmente manual.

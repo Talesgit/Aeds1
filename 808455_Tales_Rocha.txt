@@ -1,0 +1,34 @@
+                                                                      Três tipos lógicos de pesquisa 
+ 
+                                                                                                                                                                         Tales Rocha Moreira
+
+                                                                                 RESUMO
+     Neste artigo ocorre a apresentação dos 3 tipos lógicos básicos que compõe uma pesquisa científica, são elas: pesquisas sem hipóteses, pesquisas com hipóteses e pesquisas com e sem interferências entre variáveis. O objetivo é discutir as características de cada tipo de pesquisa e sua relevância no desenvolvimento de pesquisas científicas. O artigo expõe a finalidade de elaborar hipóteses para a solução de problemas, e em quais situações se justifica usar hipóteses, bem como explica como ocorre a relação entre variáveis na pesquisa. Serão apresentados exemplos para ilustrar cada tipo de pesquisa, e no final, as considerações de aplicação dos diferentes tipos de pesquisa no desenvolvimento da metodologia científica.
+
+1.Introdução
+
+    A pesquisa científica ocorre quando a partir de um estudo, ou uma análise, surge um questionamento, ou uma pergunta, que pode ser respondida a partir de testes, ou caso seja um problema mais contextualizado, a elaboração de hipóteses, cuja finalidade é testar cada hipótese para testar se corresponde a solução do problema. No caso para a solução de um problema, a hipótese é uma ferramenta fundamental na solução, na qual, sempre será priorizada, a hipótese mais simples de ser testada, caso seja negada, progredir sucessivamente para as mais complexas.
+
+2.Desenvolvimento
+
+2.1 As pesquisas sem hipótese
+
+    As pesquisas sem hipótese, não tem a necessidade de elaborar uma hipótese para a solução de um problema ,elas descrevem estruturas, situações e ocorrências. Se trata da representação de informações mais concretas, como por exemplo: Quantas espécies de aves existem na floresta amazônica? Neste caso, se trata de um número exato, a PERGUNTA é que levou á coleta de dados, na qual uma hipótese não faria sentido.
+ 
+2.2 As pesquisas com hipótese
+
+    As pesquisas com hipóteses, são situações problema, na qual a formulação de HIPÓTESES, é que levam para a coleta de dados, na qual cada hipótese será testada, tendo preferência sempre para a hipótese mais simples em relação a mais complexa.
+Pesquisas com hipóteses, estudam a relação entre duas ou mais variáveis, por exemplo, dada uma certa população, verificar se há uma relação entre a altura dos indivíduos com o sexo destes; ou ainda, se uma variável interfere na outra, ou depende da evolução da outra, exemplo, a relação entre a prática de atividades físicas, e a obesidade.
+Em uma pesquisa com hipótese, existe a associação de variáveis, mas que não necessariamente, uma determina a outra, nesse caso, há um fato ou acontecimento anterior, que originam ou se relaciona com essas duas variáveis, o que faz com que as duas variáveis estejam associadas, mas não necessariamente, interligadas. Exemplo: para publicações de pesquisas na área de tecnologia a nível internacional, é fundamental duas variáveis: a boa pesquisa e fluência em inglês. Nesse caso, junto a boa pesquisa, é indispensável saber inglês, para atender a condição internacional, mas somente saber o inglês não garantirá o sucesso da pesquisa, pois para tal é necessário ter pesquisa forte. Mas já a nível nacional, a variável idioma, pode em alguns casos ser dispensável, então nesse caso não há uma relação de dependência entre as duas variáveis. Mas estão ambas associadas ao fato anterior: a publicação de pesquisas na área da tecnologia.
+
+No caso da existência de interferência entre duas variáveis, há um mecanisomo de interferência , que associa a variável de causa a de efeito, onde é preciso mostrar ao leitor, que há por meio do mecanismo uma interferência.
+
+3.Considerações finais
+    Como conclusão, ocorre tres tipos básicos de pesquisa: as pesquisas descritivas, que irão descrever os objetos de pesquisa, as pesquisas associativas, que terão duas ou mais variáveis a serem associadas, que pode ser necessário a elaboração de hipóteses para a chegada na conclusão, e as pesquisas por interferência, cujas variáveis interferem uma na outra, existe as variáveis  de causa, e as de efeito. Tendo em vista a definição desses 3 tipos básicos de metodologia para pesquisa, é evidente que tal distribuição é importante, pois, para cada situação problema, ou pesquisa a ser feita, será necessário uma metodologia diferente.
+
+REFERÊNCIAS
+
+VOLPATO Gilson, AULA 20 de 42 - TRÊS TIPOS LÓGICOS DE PESQUISA
+Publicado por Gilson Volpato.
+Disponível em: https://www.youtube.com/watch?v=XoTQo7fUf0s
+Acesso em 08/06/2023

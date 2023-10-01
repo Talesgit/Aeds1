@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>DefaultProjectName - has_BOX</TITLE>
+<script type="text/javascript">
+  var relPathToCommmon = "../common/";
+  var relPathToHelpDir = "../common/help/";
+</script>
+<script type="text/javascript" src="../common/jsdyn.js" language="JavaScript"></script>
+<script type="text/javascript" src="../common/js.js" language="JavaScript"></script>
+<script type="text/javascript" src="leftmenu.js" language="JavaScript"></script>
+<script type="text/javascript">
+  var toSearchPage     = "_search','../search";
+  Body1();
+</script>
+<div class="headerPage">has_BOX</div>
+<div class="path"><a href="#" OnMouseOver="link('','../index',this)" class="pathLink">Default mainpage</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_dir','karel_h_doc0',this)" class="pathLink">karel_h_doc</A><img src="../common/path-arrow.gif" class="path-arrow"><span class="pathNonLink">has_BOX</span></div>
+<script type="text/javascript">
+ Body2();
+ BodyLeftMenuStart();
+WriteLeftMenu("","","","");
+ BodyLeftMenuEnd();
+ Body3();
+</script>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','has_BOX231090242','_description',this)" class="tabLinkInActive">Description</a></span>
+<span class="tabActive"><a href="#" OnMouseOver="linkTab('_member','has_BOX231090242','_source',this)" class="tabLinkActive">Source</a></span>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','has_BOX231090242','_callgraph',this)" class="tabLinkInActive">Call Graph</a></span>
+<script type="text/javascript">
+ Body4();
+</script>
+<div class="contentAirTop"></div>
+<div class="paragraph2NoTopPadding">Start Line: 503</div>
+<pre class="codeExamples">
+int <a href="#" onMouseOver="link('_member','has_BOX231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;has_BOX&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>has_Box - Retrive a box index at a world slot.');" onMouseOut="return nd();">has_BOX</a>(int avenue, int street)
+{
+  int  result = 0;
+  int  z = -1;
+  char c;
+
+  <a href="#" onMouseOver="link('_class','s_world0',this); overLibDiagram();return overlib('<strong>Public Attributes</strong><BR><TABLE><TR><TD>data</TD></TR><TR><TD>depth</TD></TR><TR><TD>height</TD></TR><TR><TD>name</TD></TR><TR><TD>width</TD></TR></TABLE>',CAPTION,'<strong>Brief description</strong><BR>world  - World structure definition.');" onMouseOut="return nd();">ref_world</a> v_world = <a href="#" onMouseOver="link('_member','world_now0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>ref_world&nbsp;&nbsp;world_now ',CAPTION,'<strong>Brief description</strong><BR>world_now - Current reference to a World structure.');" onMouseOut="return nd();">world_now</a>;
+
+  if ( v_world != NULL &amp;&amp;
+       <a href="#" onMouseOver="link('_member','areValid231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>bool&nbsp;&nbsp;areValid&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>areValid - Check if avenue and street are valid.');" onMouseOut="return nd();">areValid</a> ( avenue, street ) )
+  {
+       do
+       {
+          z = z + 1;
+          c = v_world-&gt;<a href="#" onMouseOver="link('_member','data431183',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;data [10][10][20]',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">data</a> [ street-1 ][ avenue-1 ][ z ];
+          if ( 'a' &lt;= c  &amp;&amp; c &lt;= 'z' )
+          {
+             result = c;
+          }
+       }
+       while ( z &lt; v_world-&gt;<a href="#" onMouseOver="link('_member','depth431183',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;depth ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">depth</a>-1 );
+  }
+  return ( result );
+} // end has_BOX ( )
+</pre><div class="contentAirBottom"></div>
+<script type="text/javascript">
+ Body5();
+Statistics("","","","","");
+ Body6();
+SetPageTab('_member','_source');
+</script>

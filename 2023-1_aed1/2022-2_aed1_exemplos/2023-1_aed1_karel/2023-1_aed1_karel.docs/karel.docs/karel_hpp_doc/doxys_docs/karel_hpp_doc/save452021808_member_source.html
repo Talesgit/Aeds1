@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>DefaultProjectName - save</TITLE>
+<script type="text/javascript">
+  var relPathToCommmon = "../common/";
+  var relPathToHelpDir = "../common/help/";
+</script>
+<script type="text/javascript" src="../common/jsdyn.js" language="JavaScript"></script>
+<script type="text/javascript" src="../common/js.js" language="JavaScript"></script>
+<script type="text/javascript" src="leftmenu.js" language="JavaScript"></script>
+<script type="text/javascript">
+  var toSearchPage     = "_search','../search";
+  Body1();
+</script>
+<div class="headerPage">save</div>
+<div class="path"><a href="#" OnMouseOver="link('','../index',this)" class="pathLink">Default mainpage</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_dir','karel_hpp_doc0',this)" class="pathLink">karel_hpp_doc</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_class','World0',this)" class="pathLink">World</A><img src="../common/path-arrow.gif" class="path-arrow"><span class="pathNonLink">save</span></div>
+<script type="text/javascript">
+ Body2();
+ BodyLeftMenuStart();
+WriteLeftMenu("","","","");
+ BodyLeftMenuEnd();
+ Body3();
+</script>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','save452021808','_description',this)" class="tabLinkInActive">Description</a></span>
+<span class="tabActive"><a href="#" OnMouseOver="linkTab('_member','save452021808','_source',this)" class="tabLinkActive">Source</a></span>
+<span class="tabInActiveGrayout"><span class="tabLinkGrayout">Call Graph</span></span>
+<script type="text/javascript">
+ Body4();
+</script>
+<div class="contentAirTop"></div>
+<div class="paragraph2NoTopPadding">Start Line: 926</div>
+<pre class="codeExamples">
+void <a href="#" onMouseOver="link('_member','save452021808',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;save&nbsp;&nbsp;(const char * fileName)',CAPTION,'<strong>Brief description</strong><BR>save - Write current world items to a file.');" onMouseOut="return nd();">World::save</a>(const char *fileName)
+{
+    FILE* f_world;
+
+    int   x, y, z;
+    char  c;
+
+    f_world = fopen ( fileName, "wt" );
+ // save current name
+    fprintf ( f_world, "%s\n", 
+              name  );
+ // save current boundaries
+    fprintf ( f_world, "%d %d %d\n",
+              height, width, depth  );
+ // search for data and save them
+    for ( x=0; x &lt; height; x=x+1 )
+    for ( y=0; y &lt; width ; y=y+1 )
+    {
+        z=0;
+        do
+        {
+            c = <a href="#" onMouseOver="link('_member','data57293',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>char&nbsp;&nbsp;data [10][10][20]',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">data</a> [x][y][z];
+            if ( (c == '|' || c == '_') ||
+                 ('1' &lt;= c &amp;&amp; c &lt;= '9')  )
+            {
+                 fprintf ( f_world, "%d %d %d %c\n", x, y, z, data[x][y][z] );
+            }
+            z = z + 1;
+        }
+        while ( z &lt; depth &amp;&amp; c != '.' );
+    }
+    fclose ( f_world );
+} // end World::save ( )
+</pre><div class="contentAirBottom"></div>
+<script type="text/javascript">
+ Body5();
+Statistics("","","","","");
+ Body6();
+SetPageTab('_member','_source');
+</script>

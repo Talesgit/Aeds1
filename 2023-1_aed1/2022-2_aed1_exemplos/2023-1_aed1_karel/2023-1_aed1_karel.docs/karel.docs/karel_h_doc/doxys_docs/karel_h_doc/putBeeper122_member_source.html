@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<TITLE>DefaultProjectName - putBeeper</TITLE>
+<script type="text/javascript">
+  var relPathToCommmon = "../common/";
+  var relPathToHelpDir = "../common/help/";
+</script>
+<script type="text/javascript" src="../common/jsdyn.js" language="JavaScript"></script>
+<script type="text/javascript" src="../common/js.js" language="JavaScript"></script>
+<script type="text/javascript" src="leftmenu.js" language="JavaScript"></script>
+<script type="text/javascript">
+  var toSearchPage     = "_search','../search";
+  Body1();
+</script>
+<div class="headerPage">putBeeper</div>
+<div class="path"><a href="#" OnMouseOver="link('','../index',this)" class="pathLink">Default mainpage</A><img src="../common/path-arrow.gif" class="path-arrow"><a href="#" OnMouseOver="link('_dir','karel_h_doc0',this)" class="pathLink">karel_h_doc</A><img src="../common/path-arrow.gif" class="path-arrow"><span class="pathNonLink">putBeeper</span></div>
+<script type="text/javascript">
+ Body2();
+ BodyLeftMenuStart();
+WriteLeftMenu("","","","");
+ BodyLeftMenuEnd();
+ Body3();
+</script>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','putBeeper122','_description',this)" class="tabLinkInActive">Description</a></span>
+<span class="tabActive"><a href="#" OnMouseOver="linkTab('_member','putBeeper122','_source',this)" class="tabLinkActive">Source</a></span>
+<span class="tabInActive"><a href="#" OnMouseOver="linkTab('_member','putBeeper122','_callgraph',this)" class="tabLinkInActive">Call Graph</a></span>
+<script type="text/javascript">
+ Body4();
+</script>
+<div class="contentAirTop"></div>
+<div class="paragraph2NoTopPadding">Start Line: 1711</div>
+<pre class="codeExamples">
+void <a href="#" onMouseOver="link('_member','putBeeper122',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;putBeeper&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>putBeeper - Put a beeper at current world slot.');" onMouseOut="return nd();">putBeeper</a>()
+{
+    int  x;
+
+    <a href="#" onMouseOver="link('_class','s_world0',this); overLibDiagram();return overlib('<strong>Public Attributes</strong><BR><TABLE><TR><TD>data</TD></TR><TR><TD>depth</TD></TR><TR><TD>height</TD></TR><TR><TD>name</TD></TR><TR><TD>width</TD></TR></TABLE>',CAPTION,'<strong>Brief description</strong><BR>world  - World structure definition.');" onMouseOut="return nd();">ref_world</a> v_world = <a href="#" onMouseOver="link('_member','world_now0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>ref_world&nbsp;&nbsp;world_now ',CAPTION,'<strong>Brief description</strong><BR>world_now - Current reference to a World structure.');" onMouseOut="return nd();">world_now</a>;
+    <a href="#" onMouseOver="link('_class','s_robot0',this); overLibDiagram();return overlib('<strong>Public Attributes</strong><BR><TABLE><TR><TD>avenue</TD></TR><TR><TD>beepers</TD></TR><TR><TD>direction</TD></TR><TR><TD>name</TD></TR><TR><TD>status</TD></TR><TR><TD>street</TD></TR><TR><TD>symbol</TD></TR></TABLE>',CAPTION,'<strong>Brief description</strong><BR>robot     - Robot structure definition.');" onMouseOut="return nd();">ref_robot</a> v_robot = <a href="#" onMouseOver="link('_member','robot_now0',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>ref_robot&nbsp;&nbsp;robot_now ',CAPTION,'<strong>Brief description</strong><BR>robot_now - Current reference to a Robot structure.');" onMouseOut="return nd();">robot_now</a>;
+
+    if ( v_world != NULL &amp;&amp;
+         v_robot != NULL )
+    {
+         if ( v_robot-&gt;<a href="#" onMouseOver="link('_member','beepers496751',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;beepers ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">beepers</a> &lt;= 0 )
+         {
+            <a href="#" onMouseOver="link('_member','show_Error86138908',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;show_Error&nbsp;&nbsp;(char * message)',CAPTION,'<strong>Brief description</strong><BR>show_Error  - Show error message.');" onMouseOut="return nd();">show_Error</a> ( "ERROR: No beeper." );
+         }
+         else
+         {
+            x = <a href="#" onMouseOver="link('_member','has_slot231090242',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;has_slot&nbsp;&nbsp;(int avenue, int street)',CAPTION,'<strong>Brief description</strong><BR>has_slot - Retrieve a free space at a world slot.');" onMouseOut="return nd();">has_slot</a> ( v_robot-&gt;<a href="#" onMouseOver="link('_member','avenue496751',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;avenue ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">avenue</a>, v_robot-&gt;<a href="#" onMouseOver="link('_member','street496751',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;street ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">street</a> );
+            if ( x &lt; 0 )
+            {
+               <a href="#" onMouseOver="link('_member','show_Error86138908',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;show_Error&nbsp;&nbsp;(char * message)',CAPTION,'<strong>Brief description</strong><BR>show_Error  - Show error message.');" onMouseOut="return nd();">show_Error</a> ( "ERROR: No slot free." );
+            }
+            else
+            {
+               v_robot-&gt;<a href="#" onMouseOver="link('_member','beepers496751',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;beepers ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">beepers</a> = v_robot-&gt;<a href="#" onMouseOver="link('_member','beepers496751',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;beepers ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">beepers</a> - 1;
+               <a href="#" onMouseOver="link('_member','set_World802104044',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;set_World<BR>(int avenue, int street, char object)',CAPTION,'<strong>Brief description</strong><BR>set_World - Install an object at a world slot.');" onMouseOut="return nd();">set_World</a> ( v_robot-&gt;<a href="#" onMouseOver="link('_member','avenue496751',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;avenue ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">avenue</a>, v_robot-&gt;<a href="#" onMouseOver="link('_member','street496751',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>int&nbsp;&nbsp;street ',CAPTION,'<strong>Brief description</strong><BR>');" onMouseOut="return nd();">street</a>, '1' );
+               <a href="#" onMouseOver="link('_member','debug_Robot122',this); overLibDiagram();return overlib('<strong>Syntax</strong><BR>void&nbsp;&nbsp;debug_Robot&nbsp;&nbsp;()',CAPTION,'<strong>Brief description</strong><BR>debug_Robot - Show current robot information.');" onMouseOut="return nd();">debug_Robot</a> ( );
+            }
+         }
+    }
+} // end putBeeper ( )
+</pre><div class="contentAirBottom"></div>
+<script type="text/javascript">
+ Body5();
+Statistics("","","","","");
+ Body6();
+SetPageTab('_member','_source');
+</script>

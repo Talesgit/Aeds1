@@ -1,0 +1,5 @@
+- No ex 1, consegui printar o resultado 7 vezes usando um While, há outra forma mais eficiente de faze-lo?
+-No exercício 3, ao tentar declarar o tipo da variável como double, na saída aparecia exemplo: x = 1234-36e. Um número estranho diferente do
+valor indicado para mostrar. Como resolver? Então os lados da área do triângulo foram declarados como int.
+-No exercício 8, reparei que, o printf depois do comentário "mostrar valor lido", só realizou a operação, se eu declarasse a variável "area_da_base = x * y;"logo acima do printf , antes testei declarar a mesma variável no início da int main(), junto com a declaração dos outros valores e, no terminal ele não realizou a operação, por que isso ocorre?
+-No EX 9, aproximei o valor de pi para 3,1415 já na operação dentro do printf, no anexo, vi que se fode declarar uma constante, mas gostaria de saber se dentro das bibliotecas do C, já não possui uma constante de PI.

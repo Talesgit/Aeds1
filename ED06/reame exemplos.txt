@@ -1,0 +1,3 @@
+- No exemplo 06, a soma estava sempre resultando em 0.0, e estava como um valor definido dentro da função como 0.0, não retornando a soma. Então resolvi colocar soma
+como parâmetro da função somarFracoes, e atribuir 1.0 a ela na funcao chamadora, que no caso, a soma foi realizada, e o exemplo 06 acabou com a mesma saida do exemplo 07 
+com um exemplo até mais simples. A intenção da soma no EX 6 era realmente ter a saida 0? Pode conferi-lo? 

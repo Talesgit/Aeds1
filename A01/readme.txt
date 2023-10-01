@@ -1,0 +1,1 @@
+-Exercicio06 só está funcionando pela metade

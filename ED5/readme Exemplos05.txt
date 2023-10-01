@@ -1,0 +1,1 @@
+-No metodo 7, troquei o %7,4lf por %1.0lf, e sumiram as casas fracionárias, por que isso acontece?
